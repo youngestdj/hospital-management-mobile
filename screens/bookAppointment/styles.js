@@ -3,13 +3,13 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#1fa252",
+    backgroundColor: "#413c69",
     alignItems: "stretch",
     justifyContent: "flex-start"
   },
   loginContainer: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#413c69",
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     alignItems: "center",
@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
   },
   boldText: {
     fontSize: 30,
-    fontFamily: "raleway-regular",
-    color: "#333"
+    fontFamily: "bold-raleway",
+    color: "#fff"
   },
   submit: {
     fontSize: 20,
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginLeft: 10,
     marginRight: 10,
-    backgroundColor: "#1fa252",
+    backgroundColor: "#ad62aa",
     justifyContent: "center",
     alignItems: "center",
     borderBottomLeftRadius: 10,
@@ -62,9 +62,10 @@ const styles = StyleSheet.create({
     marginRight: 10,
     marginBottom: 5,
     paddingLeft: 25,
-    borderColor: "#ddd",
+    borderColor: "#ad62aa",
     borderStyle: "solid",
-    borderWidth: 1
+    borderWidth: 1,
+    color: "#fff"
   },
   textarea: {
     height: 150,
@@ -73,10 +74,11 @@ const styles = StyleSheet.create({
     marginRight: 10,
     marginBottom: 5,
     paddingLeft: 25,
-    borderColor: "#ddd",
+    borderColor: "#ad62aa",
     borderStyle: "solid",
     borderWidth: 1,
-    alignItems: "flex-start"
+    alignItems: "flex-start",
+    color: "#fff"
   },
   roundedTop: {
     borderTopLeftRadius: 10,
@@ -90,6 +92,10 @@ const styles = StyleSheet.create({
     marginRight: 10,
     marginBottom: 5,
     paddingLeft: 15
+  },
+  date: {
+    color: "#b58b99",
+    marginTop: 15,
   }
 });
 

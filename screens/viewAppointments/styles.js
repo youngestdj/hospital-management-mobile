@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     alignItems: "stretch",
     justifyContent: "flex-start"
   },
-  loginContainer: {
+  appointmentsContainer: {
     flex: 1,
     backgroundColor: "#413c69",
     borderTopLeftRadius: 30,
@@ -15,11 +15,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     flex: 1
-  },
-  bigText: {
-    color: "#fff",
-    fontSize: 30,
-    fontFamily: "raleway-regular"
   },
   boldText: {
     fontSize: 30,
@@ -67,24 +62,31 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     color: "#fff"
   },
+  textarea: {
+    height: 150,
+    fontSize: 15,
+    marginLeft: 10,
+    marginRight: 10,
+    marginBottom: 5,
+    paddingLeft: 25,
+    borderColor: "#ad62aa",
+    borderStyle: "solid",
+    borderWidth: 1,
+    alignItems: "flex-start",
+    color: "#fff"
+  },
   roundedTop: {
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10
   },
   pickerWrapper: {
-    borderColor: "#ad62aa",
+    borderColor: "#ddd",
     borderStyle: "solid",
     borderWidth: 1,
     marginLeft: 10,
     marginRight: 10,
     marginBottom: 5,
     paddingLeft: 15
-  },
-  picker: {
-    height: 50,
-    fontSize: 20,
-    marginLeft: 0,
-    marginRight: 10
   }
 });
 
