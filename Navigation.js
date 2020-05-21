@@ -10,10 +10,25 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 const Drawer = createDrawerNavigator();
 const DrawerNavigator = () => (
-  <Drawer.Navigator>
+  <Drawer.Navigator
+    drawerStyle={{ backgroundColor: "#413c69" }}
+    drawerContentOptions={{
+      activeTintColor: "#fff",
+      activeBackgroundColor: "#ad62aa",
+      inactiveTintColor: "#fff",
+      itemStyle: {
+        borderBottomColor: "#2c2947",
+        borderBottomWidth: 1,
+        paddingBottom: 5,
+        paddingTop: 5,
+        marginTop: 0,
+        marginBottom: 0
+      },
+    }}
+  >
     <Drawer.Screen name="Test" component={TestScreen} />
-    <Drawer.Screen name="BookAppointment" component={BookAppointment} />
-    <Drawer.Screen name="ViewAppointments" component={ViewAppointments} />
+    <Drawer.Screen name="Book Appointment" component={BookAppointment} />
+    <Drawer.Screen name="View Appointments" component={ViewAppointments} />
   </Drawer.Navigator>
 );
 
