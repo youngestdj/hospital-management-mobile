@@ -8,14 +8,15 @@ import BookAppointment from "./screens/bookAppointment";
 import ViewAppointments from "./screens/viewAppointments";
 import { createStackNavigator } from "@react-navigation/stack";
 import Appointment from "./screens/appointment";
+import PatientProfile from "./screens/patientProfile";
 
 const Stack = createStackNavigator();
 const MainNavigator = () => (
   <Stack.Navigator initialRouteName="Home" headerMode="none">
     <Stack.Screen name="Home" component={SplashScreen} />
     <Stack.Screen name="Login" component={Login} />
-    {/* <Stack.Screen name="DrawerNavigator" component={DrawerNavigator} /> */}
     <Stack.Screen name="Appointment" component={Appointment} />
+    <Stack.Screen name="PatientProfile" component={PatientProfile} />
   </Stack.Navigator>
 );
 
@@ -39,7 +40,6 @@ const DrawerNavigator = () => (
       }}
     >
       <Drawer.Screen name="Home" component={MainNavigator} />
-      <Drawer.Screen name="Test" component={TestScreen} />
       <Drawer.Screen name="Book Appointment" component={BookAppointment} />
       <Drawer.Screen name="View Appointments" component={ViewAppointments} />
     </Drawer.Navigator>

@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     alignItems: "flex-start",
-    flex: 1,
     padding: 30
   },
   date: {
@@ -45,7 +44,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#ad62aa",
     justifyContent: "center",
     alignItems: "center",
-
   },
 });
 

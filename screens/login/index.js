@@ -35,11 +35,7 @@ const Login = ({ navigation }) => {
           </View>
         </View>
         <TouchableOpacity
-          onPress={() =>
-            navigation.navigate("DrawerNavigator", {
-              screen: "BookAppointment"
-            })
-          }
+          onPress={() => navigation.navigate("Book Appointment")}
         >
           <Text style={styles.submit}>Login</Text>
         </TouchableOpacity>

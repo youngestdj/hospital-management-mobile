@@ -4,7 +4,7 @@ import Header from "../../components/header";
 import styles from "./styles";
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 
-const Appointment = () => (
+const Appointment = ({ navigation }) => (
   <>
     <View style={styles.container}>
       <Header />
@@ -22,7 +22,12 @@ const Appointment = () => (
             culpa qui officia deserunt mollit anim id est laborum.
           </Text>
 
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => {
+              navigation.navigate("PatientProfile");
+            }}
+          >
             <Text style={styles.description}>View Px profile</Text>
           </TouchableOpacity>
         </View>
