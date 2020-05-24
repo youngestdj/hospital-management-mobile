@@ -15,14 +15,18 @@ const Login = ({ navigation }) => {
             <TextInput
               style={[styles.input, styles.roundedTop]}
               placeholder="Email"
+              placeholderTextColor="#b58b99"
             />
-            <TextInput style={styles.input} placeholder="Password" />
+            <TextInput
+              style={styles.input}
+              placeholder="Password"
+              placeholderTextColor="#b58b99"
+            />
             <View style={styles.pickerWrapper}>
               <Picker style={styles.picker}>
-                <Picker.Item label="Select user type" color="#333" />
-                <Picker.Item label="Patient" value="java" />
-                <Picker.Item label="Doctor" value="js" />
-                <Picker.Item label="Admin" value="js" />
+                <Picker.Item label="Select user type" color="#b58b99" />
+                <Picker.Item label="Patient" value="patient" />
+                <Picker.Item label="Doctor" value="doctor" />
               </Picker>
             </View>
             <TouchableOpacity style={styles.button}>
@@ -31,7 +35,7 @@ const Login = ({ navigation }) => {
           </View>
         </View>
         <TouchableOpacity
-          onPress={() => navigation.navigate("BookAppointment")}
+          onPress={() => navigation.navigate("Book Appointment")}
         >
           <Text style={styles.submit}>Login</Text>
         </TouchableOpacity>

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Text, View, Image } from "react-native";
-import { withNavigation } from "react-navigation";
+import { NavigationActions } from "@react-navigation/drawer";
 import styles from "./styles";
 
 const SplashScreen = ({ navigation }) => {
@@ -12,10 +12,10 @@ const SplashScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Image
+      {/* <Image
         source={require("../../assets/icons/logo.png")}
         style={styles.logo}
-      />
+      /> */}
       <>
         <Text style={styles.bigText}>Hospital</Text>
         <Text style={[styles.bigText, styles.boldText]}>Manager</Text>
@@ -24,4 +24,4 @@ const SplashScreen = ({ navigation }) => {
   );
 };
 
-export default withNavigation(SplashScreen);
+export default SplashScreen;

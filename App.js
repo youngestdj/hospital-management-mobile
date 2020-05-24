@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View } from "react-native";
 import * as Font from "expo-font";
-import AppNavigator from "./Navigation";
+import Navigator from "./Navigation";
 
 const App = () => {
   const [loaded, setLoaded] = useState({ fontLoaded: false });
@@ -23,7 +23,7 @@ const App = () => {
     return <View />;
   }
 
-  return <AppNavigator />;
+  return <Navigator />;
 };
 
 export default App;
