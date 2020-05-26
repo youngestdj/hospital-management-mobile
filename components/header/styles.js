@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     flexDirection: "row",
     padding: 30,
+    paddingTop: 50
   },
   bigText: {
     color: "#fff",

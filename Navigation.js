@@ -2,7 +2,6 @@ import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import SplashScreen from "./screens/splash";
-import TestScreen from "./screens/test";
 import Login from "./screens/login";
 import BookAppointment from "./screens/bookAppointment";
 import ViewAppointments from "./screens/viewAppointments";
