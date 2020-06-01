@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#413c69",
     alignItems: "stretch",
-    justifyContent: "flex-start"
+    justifyContent: "flex-start",
   },
   loginContainer: {
     flex: 1,
@@ -14,26 +14,26 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     alignItems: "center",
     justifyContent: "center",
-    flex: 1
+    flex: 1,
   },
   bigText: {
     color: "#fff",
     fontSize: 30,
-    fontFamily: "raleway-regular"
+    fontFamily: "raleway-regular",
   },
   boldText: {
     fontSize: 30,
     fontFamily: "bold-raleway",
-    color: "#fff"
+    color: "#fff",
   },
   submit: {
     fontSize: 20,
     fontFamily: "raleway-regular",
-    color: "#fff"
+    color: "#fff",
   },
   logo: {
     width: 100,
-    height: 100
+    height: 100,
   },
   button: {
     height: 50,
@@ -44,16 +44,16 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderBottomLeftRadius: 10,
-    borderBottomRightRadius: 10
+    borderBottomRightRadius: 10,
   },
   center: {
     alignItems: "center",
     justifyContent: "center",
-    flex: 1
+    flex: 1,
   },
   formWrapper: {
     marginTop: 10,
-    alignSelf: "stretch"
+    alignSelf: "stretch",
   },
   input: {
     height: 50,
@@ -65,11 +65,11 @@ const styles = StyleSheet.create({
     borderColor: "#ad62aa",
     borderStyle: "solid",
     borderWidth: 1,
-    color: "#fff"
+    color: "#fff",
   },
   roundedTop: {
     borderTopLeftRadius: 10,
-    borderTopRightRadius: 10
+    borderTopRightRadius: 10,
   },
   pickerWrapper: {
     borderColor: "#ad62aa",
@@ -78,14 +78,15 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginRight: 10,
     marginBottom: 5,
-    paddingLeft: 15
+    paddingLeft: 15,
   },
   picker: {
     height: 50,
     fontSize: 20,
     marginLeft: 0,
-    marginRight: 10
-  }
+    marginRight: 10,
+    color: "#fff",
+  },
 });
 
 export default styles;
