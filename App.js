@@ -7,6 +7,13 @@ import { ApolloProvider } from "@apollo/react-hooks";
 
 const client = new ApolloClient({
   uri: "https://hospital-management-jessam.herokuapp.com/graphql",
+  request: (operation) => {
+    operation.setContext({
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+  }
 });
 
 

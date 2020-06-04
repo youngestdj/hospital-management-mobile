@@ -11,38 +11,44 @@ import PatientProfile from "./screens/patientProfile";
 
 const Stack = createStackNavigator();
 const MainNavigator = () => (
-  <Stack.Navigator initialRouteName="Home" headerMode="none">
-    <Stack.Screen name="Home" component={SplashScreen} />
-    <Stack.Screen name="Login" component={Login} />
+  <Stack.Navigator initialRouteName="View Appointments" headerMode="none">
+    <Drawer.Screen name="View Appointments" component={ViewAppointments} />
     <Stack.Screen name="Appointment" component={Appointment} />
     <Stack.Screen name="PatientProfile" component={PatientProfile} />
   </Stack.Navigator>
 );
-
-const Drawer = createDrawerNavigator();
-const DrawerNavigator = () => (
+const Stack2 = createStackNavigator();
+const SubNavigator = () => (
   <NavigationContainer>
-    <Drawer.Navigator
-      drawerStyle={{ backgroundColor: "#413c69" }}
-      drawerContentOptions={{
-        activeTintColor: "#fff",
-        activeBackgroundColor: "#ad62aa",
-        inactiveTintColor: "#fff",
-        itemStyle: {
-          borderBottomColor: "#2c2947",
-          borderBottomWidth: 1,
-          paddingBottom: 5,
-          paddingTop: 5,
-          marginTop: 0,
-          marginBottom: 0,
-        },
-      }}
-    >
-      <Drawer.Screen name="Home" component={MainNavigator} />
-      <Drawer.Screen name="Book Appointment" component={BookAppointment} />
-      <Drawer.Screen name="View Appointments" component={ViewAppointments} />
-    </Drawer.Navigator>
+    <Stack2.Navigator initialRouteName="Home" headerMode="none">
+      <Stack.Screen name="Home" component={SplashScreen} />
+      <Stack2.Screen name="Drawer" component={DrawerNavigator} />
+      <Stack.Screen name="Login" component={Login} />
+    </Stack2.Navigator>
   </NavigationContainer>
 );
 
-export default DrawerNavigator;
+const Drawer = createDrawerNavigator();
+const DrawerNavigator = () => (
+  <Drawer.Navigator
+    drawerStyle={{ backgroundColor: "#413c69" }}
+    drawerContentOptions={{
+      activeTintColor: "#fff",
+      activeBackgroundColor: "#ad62aa",
+      inactiveTintColor: "#fff",
+      itemStyle: {
+        borderBottomColor: "#2c2947",
+        borderBottomWidth: 1,
+        paddingBottom: 5,
+        paddingTop: 5,
+        marginTop: 0,
+        marginBottom: 0,
+      },
+    }}
+  >
+    <Drawer.Screen name="Book Appointment" component={BookAppointment} />
+    <Drawer.Screen name="View Appointments" component={MainNavigator} />
+  </Drawer.Navigator>
+);
+
+export default SubNavigator;

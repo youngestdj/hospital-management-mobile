@@ -87,6 +87,14 @@ const styles = StyleSheet.create({
     marginRight: 10,
     color: "#fff",
   },
+  error: {
+    color: "#fc6d65",
+    fontSize: 15,
+  },
+  errorContainer: {
+    paddingBottom: 20,
+    paddingTop: 20,
+  }
 });
 
 export default styles;
