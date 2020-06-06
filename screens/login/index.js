@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Text, View, Picker, KeyboardAvoidingView } from "react-native";
 import Header from "../../components/header";
 import styles from "./styles";
+import { LOGIN } from "../../graphql/mutations";
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
-import { useQuery, useMutation } from "@apollo/react-hooks";
-import gql from "graphql-tag";
+import { useMutation } from "@apollo/react-hooks";
 import AsyncStorage from "@react-native-community/async-storage";
 
 const Login = ({ navigation }) => {
@@ -47,17 +47,7 @@ const Login = ({ navigation }) => {
       setErrors(["Something went wrong."]);
     }
   };
-  const LOGIN = gql`
-    mutation login($email: String!, $password: String!, $user: String!) {
-      login(email: $email, password: $password, user: $user) {
-        id
-        token
-        firstname
-        lastname
-        email
-      }
-    }
-  `;
+
   const [login, { data, loading, error }] = useMutation(LOGIN);
 
   const loginUser = () => {
@@ -85,13 +75,12 @@ const Login = ({ navigation }) => {
       <View style={styles.loginContainer}>
         <Text style={styles.boldText}>Login</Text>
         <View style={styles.errorContainer}>
-          {errors
-            ? errors.map((error) => (
-                <Text key={error} style={styles.error}>
-                  {error}
-                </Text>
-              ))
-            : null}
+          {errors &&
+            errors.map((error) => (
+              <Text key={error} style={styles.error}>
+                {error}
+              </Text>
+            ))}
         </View>
         <View style={styles.formWrapper}>
           <TextInput
@@ -123,7 +112,6 @@ const Login = ({ navigation }) => {
               <Picker.Item label="Select user type" color="#b58b99" />
               <Picker.Item label="Patient" value="Patient" />
               <Picker.Item label="Doctor" value="Doctor" />
-              <Picker.Item label="Root" value="Root" />
             </Picker>
           </View>
           <TouchableOpacity style={styles.button} onPress={() => loginUser()}>

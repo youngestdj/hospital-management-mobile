@@ -89,10 +89,15 @@ const styles = StyleSheet.create({
   },
   error: {
     color: "#fc6d65",
+    alignItems: "center",
+    justifyContent: "center",
     fontSize: 15,
+    alignSelf: "center",
   },
   errorContainer: {
     paddingBottom: 20,
+    justifyContent: "center",
+    alignItems: "center",
     paddingTop: 20,
   }
 });

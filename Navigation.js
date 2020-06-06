@@ -8,6 +8,9 @@ import ViewAppointments from "./screens/viewAppointments";
 import { createStackNavigator } from "@react-navigation/stack";
 import Appointment from "./screens/appointment";
 import PatientProfile from "./screens/patientProfile";
+import { getUser } from "./helpers";
+
+const { user } = getUser();
 
 const Stack = createStackNavigator();
 const MainNavigator = () => (
@@ -46,8 +49,11 @@ const DrawerNavigator = () => (
       },
     }}
   >
-    <Drawer.Screen name="Book Appointment" component={BookAppointment} />
-    <Drawer.Screen name="View Appointments" component={MainNavigator} />
+    {user === "doctor" ? (
+      <Drawer.Screen name="View Appointments" component={MainNavigator} />
+    ) : (
+      <Drawer.Screen name="Book Appointment" component={BookAppointment} />
+    )}
   </Drawer.Navigator>
 );
 

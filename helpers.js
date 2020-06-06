@@ -1,10 +1,12 @@
-export const getUserType = async () => {
+import AsyncStorage from "@react-native-community/async-storage";
+
+export const getUser = async () => {
   try {
     const value = await AsyncStorage.getItem("user");
-    if (value.user !== null) {
-      return value.user;
+    if (value !== null) {
+      return value;
     }
   } catch (e) {
-    console.error("Something went wrong");
+    console.error("Something went wrong.");
   }
 };

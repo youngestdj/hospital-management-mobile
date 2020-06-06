@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#413c69",
     alignItems: "stretch",
-    justifyContent: "flex-start"
+    justifyContent: "flex-start",
   },
   loginContainer: {
     flex: 1,
@@ -14,26 +14,26 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     alignItems: "center",
     justifyContent: "center",
-    flex: 1
+    flex: 1,
   },
   bigText: {
     color: "#333",
     fontSize: 30,
-    fontFamily: "raleway-regular"
+    fontFamily: "raleway-regular",
   },
   boldText: {
     fontSize: 30,
     fontFamily: "bold-raleway",
-    color: "#fff"
+    color: "#fff",
   },
   submit: {
     fontSize: 20,
     fontFamily: "raleway-regular",
-    color: "#fff"
+    color: "#fff",
   },
   logo: {
     width: 100,
-    height: 100
+    height: 100,
   },
   button: {
     height: 50,
@@ -44,16 +44,16 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderBottomLeftRadius: 10,
-    borderBottomRightRadius: 10
+    borderBottomRightRadius: 10,
   },
   center: {
     alignItems: "center",
     justifyContent: "center",
-    flex: 1
+    flex: 1,
   },
   formWrapper: {
     marginTop: 10,
-    alignSelf: "stretch"
+    alignSelf: "stretch",
   },
   input: {
     height: 50,
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     borderColor: "#ad62aa",
     borderStyle: "solid",
     borderWidth: 1,
-    color: "#fff"
+    color: "#fff",
   },
   textarea: {
     height: 150,
@@ -78,11 +78,11 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     borderWidth: 1,
     alignItems: "flex-start",
-    color: "#fff"
+    color: "#fff",
   },
   roundedTop: {
     borderTopLeftRadius: 10,
-    borderTopRightRadius: 10
+    borderTopRightRadius: 10,
   },
   pickerWrapper: {
     borderColor: "#ddd",
@@ -91,12 +91,34 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginRight: 10,
     marginBottom: 5,
-    paddingLeft: 15
+    paddingLeft: 15,
   },
   date: {
     color: "#b58b99",
     marginTop: 15,
-  }
+  },
+  description: {
+    borderColor: "#ad62aa",
+    borderStyle: "solid",
+    borderWidth: 1,
+    color: "#fff",
+    marginLeft: 10,
+    marginRight: 10,
+    marginBottom: 5,
+    paddingLeft: 25,
+  },
+  error: {
+    color: "#fc6d65",
+    fontSize: 15,
+    alignSelf: "center",
+  },
+  success: {
+    color: "#a3f0a3",
+  },
+  errorContainer: {
+    paddingBottom: 20,
+    paddingTop: 20,
+  },
 });
 
 export default styles;
