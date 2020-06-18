@@ -70,7 +70,7 @@ const Login = ({ navigation }) => {
   };
 
   return (
-    <KeyboardAvoidingView behavior="padding" style={styles.container}>
+    <KeyboardAvoidingView style={styles.container}>
       <Header />
       <View style={styles.loginContainer}>
         <Text style={styles.boldText}>Login</Text>

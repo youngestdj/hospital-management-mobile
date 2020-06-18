@@ -6,7 +6,5 @@ export const getUser = async () => {
     if (value !== null) {
       return value;
     }
-  } catch (e) {
-    console.error("Something went wrong.");
-  }
+  } catch (e) {}
 };

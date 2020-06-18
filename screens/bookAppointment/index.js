@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Text, View, KeyboardAvoidingView } from "react-native";
 import Header from "../../components/header";
 import styles from "./styles";
 import { BOOK_APPOINTMENT } from "../../graphql/mutations";
+import { GET_PATIENT_PROFILE } from "../../graphql/queries";
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import moment from "moment";
@@ -21,7 +22,6 @@ const BookAppointment = () => {
     errors: null,
     success: null,
   });
-  console.log(details);
 
   const showDatePicker = (type) => {
     setShow(true);
@@ -71,12 +71,14 @@ const BookAppointment = () => {
         .then((data) => {
           return showSuccess("Appointment booked successfully!");
         })
-        .catch((e) => console.log(e.graphQLErrors[0].message));
+        .catch((e) => {
+          setDetails({ ...details, errors: [e.graphQLErrors[0].messageError] });
+        });
     }
   };
 
   return (
-    <KeyboardAvoidingView behavior="padding" style={styles.container}>
+    <KeyboardAvoidingView style={styles.container}>
       <Header />
       <View style={styles.loginContainer}>
         <Text style={styles.boldText}>Book appointment</Text>

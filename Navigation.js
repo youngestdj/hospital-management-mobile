@@ -5,6 +5,7 @@ import SplashScreen from "./screens/splash";
 import Login from "./screens/login";
 import BookAppointment from "./screens/bookAppointment";
 import ViewAppointments from "./screens/viewAppointments";
+import ViewPrescription from "./screens/viewPrescription";
 import { createStackNavigator } from "@react-navigation/stack";
 import Appointment from "./screens/appointment";
 import PatientProfile from "./screens/patientProfile";
@@ -52,7 +53,10 @@ const DrawerNavigator = () => (
     {user === "doctor" ? (
       <Drawer.Screen name="View Appointments" component={MainNavigator} />
     ) : (
-      <Drawer.Screen name="Book Appointment" component={BookAppointment} />
+      <>
+        <Drawer.Screen name="Book Appointment" component={BookAppointment} />
+        <Drawer.Screen name="View Prescription" component={ViewPrescription} />
+      </>
     )}
   </Drawer.Navigator>
 );
